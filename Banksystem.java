@@ -25,7 +25,7 @@ static boolean loggedin = false;
 
     // create local vars to store data in program
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //firdaus
         System.out.println("Welcome to bank X!"); // leaivng the name as bank X for now, we all can discuss on a name later
         
         File myFile = new File("data.txt");
@@ -133,7 +133,7 @@ static boolean loggedin = false;
         // if it doesnt, reject login
         
     }
-    public static void signUp() {
+    public static void signUp() { //ammar
         System.out.println("You chose the option to sign up! Please input these details below...");  //again like i said above, there is supposed to be an array somewhere here, but it'll be added later since this is the outline for the program.
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your fullname: ");
@@ -172,11 +172,11 @@ static boolean loggedin = false;
         // create new information into csv file and arange the data properly
         // makes sure you can read this information line by line and easily convert them into local global vars
     }
-        public static void selection() {
+        public static void selection() { // baihaqi
             System.out.println("Please choose an option:\n1. Update account\n2. Deposit money\n3. Withdraw money\n4. Log out\n5. Delete account");
             
         }
-        public static void updateAccount() {
+        public static void updateAccount() { //ammar
             boolean hasUpdated = true;
             String updatedName = name;
             int updatedAge = age;
@@ -245,7 +245,7 @@ static boolean loggedin = false;
             
             
         }
-        public static void depositMoney() {
+        public static void depositMoney() { //aman
             System.out.println("Your current balance is : " + amt);
             System.out.println("You chose to deposit money. How much money would you like to deposit?\n");
             double nb;
@@ -261,7 +261,7 @@ static boolean loggedin = false;
             // this only updates the amount tab
             // make sure user types positive integer and no non numbers
         }
-public static void withdrawMoney() {
+public static void withdrawMoney() { //aman
         //ask user for withdraw amount
         System.out.println("Your current balance is:  " + amt);
         System.out.println("Enter the amount you would like to withdraw:");
@@ -286,7 +286,7 @@ public static void withdrawMoney() {
         }
 }
 
-        public static void logOut() {
+        public static void logOut() { // baihaqi
             System.out.println("You chose to log out. Thank you for using your bank!");
             ID = "";         
             pw = "";
@@ -302,7 +302,7 @@ public static void withdrawMoney() {
             // if logout, throw back to inital loop and clear internal global vars
             // also would be good to close the file if it is open, but you need to decide if you want to open and close every time you update
         }
-public static void deleteAccount() {
+public static void deleteAccount() { //firdaus
     try {
         File oldFile = new File("data.txt");
         File newFile = new File("temp.txt");
@@ -330,7 +330,7 @@ public static void deleteAccount() {
     }
 }
 
-public static void replaceLines(String oldData, String newData) {
+public static void replaceLines(String oldData, String newData) { //aman
     try {
         // input the (modified) file content to the StringBuffer "input"
         BufferedReader file = new BufferedReader(new FileReader("data.txt"));
